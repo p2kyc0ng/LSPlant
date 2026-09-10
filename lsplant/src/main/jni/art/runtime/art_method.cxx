@@ -325,7 +325,7 @@ public:
         } else if (sdk_int >= kSdkS) {
             kAccPreCompiled = 0x00800000;
         }
-        if (sdk_int < kSdkQ) kAccFastInterpreterToInterpreterInvoke = 0;
+        if (sdk_int < kSdkQ || sdk_int > kSdkSv2) kAccFastInterpreterToInterpreterInvoke = 0;
         if (sdk_int < kSdkOreo) kAccIntrinsic = 0;
 
         if (sdk_int >= kSdkPie && !handler(SetNotIntrinsic_)) {
